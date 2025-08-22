@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}과일 분류기{% endblock %}
+{% block content %}
+<div class="card shadow p-4">
+  <h2 class="mb-4">과일 이미지를 업로드하세요 🍎🍌🍊</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+      <input type="file" name="image" class="form-control" accept="image/*" required>
+    </div>
+    <button type="submit" class="btn btn-success">예측하기</button>
+  </form>
+</div>
+{% endblock %}

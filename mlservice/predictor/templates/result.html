@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}예측 결과{% endblock %}
+{% block content %}
+<div class="card shadow p-4 text-center">
+  <h2 class="mb-4">예측된 과일 🍇</h2>
+  <p class="display-5 text-primary">{{ prediction }}</p>
+  <a href="{% url 'predict' %}" class="btn btn-outline-secondary mt-3">다시 업로드</a>
+</div>
+{% endblock %}
